@@ -1,0 +1,12 @@
+.header {
+    background-color: #CC0000;
+    /* position: sticky;
+    top: 0;
+    right: 0; */
+}
+
+.header-text {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}

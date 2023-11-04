@@ -1,0 +1,26 @@
+.my-nav {
+    background-color: #0C0C0C;
+    position: sticky;
+    top: -1px;
+    right: 0;
+}
+
+.my-navbar {
+    list-style-type: none;
+}
+
+.my-navlink {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.my-navlink:hover {
+    color: #CC0000;
+    transition: all 0.3s ease-in-out;
+}
