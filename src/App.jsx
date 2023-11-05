@@ -7,6 +7,7 @@ import Health from "./pages/Health";
 import Science from "./pages/Science";
 import Sports from "./pages/Sports";
 import Technology from "./pages/Technology";
+import Error from "./pages/Error";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="science" element={<Science />} />
             <Route path="sports" element={<Sports />} />
             <Route path="technology" element={<Technology />} />
+            <Route path="*" element={<Error />} />
           </Route>
         </Routes>
       </BrowserRouter>

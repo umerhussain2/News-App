@@ -1,0 +1,25 @@
+.footer {
+    background-color: #CC0000;
+
+    /* position: sticky;
+    bottom: 0;
+    right: 0; */
+
+    width: 100%;
+}
+
+.footer-heading {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+}
+
+.footer-text {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    padding: 5px 5px;
+    margin-bottom: 0px;
+}

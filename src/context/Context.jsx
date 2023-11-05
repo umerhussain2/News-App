@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const NewsContext = createContext(null);
 
@@ -70,25 +70,22 @@ const NewsProvider = ({ children }) => {
     setTechnology(res.data.articles);
   };
 
-  useEffect(() => {
-    fetchData();
-    busniessData();
-    entertainmentData();
-    healthData();
-    scienceData();
-    sportsData();
-    technologyData();
-  }, []);
-
   return (
     <NewsContext.Provider
       value={{
+        fetchData,
         news,
+        busniessData,
         busniess,
+        entertainmentData,
         entertainment,
+        healthData,
         health,
+        scienceData,
         science,
+        sportsData,
         sports,
+        technologyData,
         technology,
       }}
     >

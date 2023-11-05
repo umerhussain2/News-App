@@ -1,8 +1,15 @@
+import { useEffect } from "react";
 import { useNews } from "../context/Context";
 import "./css/Home.css";
+import Footer from "../components/Footer";
 
 const Sports = () => {
   const x = useNews();
+
+  useEffect(() => {
+    x.sportsData();
+  }, []);
+
   return (
     <>
       {!x.sports ? (
@@ -12,6 +19,12 @@ const Sports = () => {
       ) : (
         <>
           <div className="container-fluid py-5">
+            <div className="row">
+              <div className="col-12">
+                <h1 className="heading mb-3 px-4">Sports</h1>
+              </div>
+            </div>
+
             <div className="row">
               {x.sports?.map((i, ind) => (
                 <div
@@ -31,10 +44,8 @@ const Sports = () => {
                 </div>
               ))}
             </div>
-            <div className="top-button">
-              <a href="#">TOP</a>
-            </div>
           </div>
+          <Footer />
         </>
       )}
     </>

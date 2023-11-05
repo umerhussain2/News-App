@@ -3,10 +3,12 @@
     position: sticky;
     top: -1px;
     right: 0;
+    z-index: 10;
 }
 
 .my-navbar {
     list-style-type: none;
+    display: block;
 }
 
 .my-navlink {
@@ -23,4 +25,81 @@
 .my-navlink:hover {
     color: #CC0000;
     transition: all 0.3s ease-in-out;
+}
+
+.active {
+    color: #CC0000;
+}
+
+/* MOBILE MENU */
+
+.small-screen-container {
+    display: none;
+}
+
+.menu-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 22px;
+    color: white;
+}
+
+.menu-container {
+    display: none;
+}
+
+.mobile-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.3 ease-in-out;
+}
+
+.mobile-link:hover {
+    color: #CC0000;
+    transition: all 0.3 ease-in-out;
+
+}
+
+.mobile-link:active {
+    color: #CC0000;
+}
+
+@media screen and (max-width: 820px) {
+    .large-screen {
+        display: none;
+    }
+
+    .small-screen-container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 10px 10px;
+    }
+
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+
+        width: 100%;
+        padding: 15px 30px;
+
+        position: absolute;
+        top: 39px;
+        right: 0;
+
+        background-color: #0c0c0cf5;
+        z-index: -1;
+    }
+
+    .active {
+        color: #CC0000;
+    }
 }

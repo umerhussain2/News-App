@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { useNews } from "../context/Context";
 import "./css/Home.css";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const x = useNews();
+
+  useEffect(() => {
+    x.fetchData();
+  }, []);
 
   return (
     <>
@@ -13,6 +19,12 @@ const Home = () => {
       ) : (
         <>
           <div className="container-fluid py-5">
+            <div className="row">
+              <div className="col-12">
+                <h1 className="heading mb-3 px-4">All News</h1>
+              </div>
+            </div>
+
             <div className="row">
               {x.news?.map((i, ind) => (
                 <div
@@ -32,10 +44,8 @@ const Home = () => {
                 </div>
               ))}
             </div>
-            <div className="top-button">
-              <a href="#">TOP</a>
-            </div>
           </div>
+          <Footer />
         </>
       )}
     </>
