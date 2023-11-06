@@ -19,7 +19,7 @@ const Navbar = () => {
               <ul className="mb-0 d-flex flex-wrap justify-content-start align-items-center gap-4 py-2 my-navbar">
                 <li>
                   <NavLink className="my-navlink" to="/">
-                    All
+                    All News
                   </NavLink>
                 </li>
                 <li>
@@ -61,7 +61,7 @@ const Navbar = () => {
               </div>
 
               {mobileMenu && (
-                <div mobileMenu={mobileMenu} className="menu-container">
+                <ul mobileMenu={mobileMenu} className="menu-container">
                   <li>
                     <NavLink
                       onClick={handleOpenMenu}
@@ -125,7 +125,7 @@ const Navbar = () => {
                       technology
                     </NavLink>
                   </li>
-                </div>
+                </ul>
               )}
             </div>
           </div>

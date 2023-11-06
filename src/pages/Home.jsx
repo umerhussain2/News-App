@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useNews } from "../context/Context";
 import "./css/Home.css";
-import Footer from "../components/Footer";
 
 const Home = () => {
   const x = useNews();
@@ -21,7 +20,9 @@ const Home = () => {
           <div className="container-fluid py-5">
             <div className="row">
               <div className="col-12">
-                <h1 className="heading mb-3 px-4">All News</h1>
+                <h1 id="home" className="heading mb-3 px-4">
+                  All News
+                </h1>
               </div>
             </div>
 
@@ -45,7 +46,6 @@ const Home = () => {
               ))}
             </div>
           </div>
-          <Footer />
         </>
       )}
     </>

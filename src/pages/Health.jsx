@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useNews } from "../context/Context";
 import "./css/Home.css";
-import Footer from "../components/Footer";
 
 const Health = () => {
   const x = useNews();
@@ -45,7 +44,6 @@ const Health = () => {
               ))}
             </div>
           </div>
-          <Footer />
         </>
       )}
     </>
